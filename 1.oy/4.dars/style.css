@@ -1,0 +1,29 @@
+
+ 
+ .h1{
+            color: red;
+            background-color: aqua;
+            text-align: center;
+            font-size: 56px;
+        }
+        .p1{
+            color: red;
+            background-color: black;
+            text-align: center;
+            font-size: 56px;
+            text-transform: uppercase;
+        }
+        .p2{
+            color: red;
+            background-color: black;
+            text-align: center;
+            font-size: 56px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            font-family: 'Griffy', cursive;
+        }
+
+
+        
+        
+

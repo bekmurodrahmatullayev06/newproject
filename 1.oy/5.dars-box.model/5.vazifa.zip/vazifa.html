@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aroma & Co. - Premium Coffee & Chocolate Boutique</title>
+    <style>
+        
+    </style>
+
+    <!-- CSS faylini ulash -->
+    <link rel="stylesheet" href="vazifa.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header>
+        <h1>Aroma &amp; Co.</h1>
+        <p>
+          Premium darajadagi qahva donalari, elita shokoladlar va brewing
+          aksessuarlari butigi
+        </p>
+
+        <nav>
+          <strong>Butik bo'limlari:</strong>
+          <a href="#katalog">Kollektsiya</a> |
+          <a href="#solishtirish">Ta'm xususiyatlari</a> |
+          <a href="#buyurtma">Yetkazib berish</a> |
+          <a href="#fikr-mulohaza">Aloqa</a>
+          <br /><br />
+          <strong>Hamkor plantatsiyalar:</strong>
+          <a href="#">Ethiopia Specialty</a> | <a href="#">Brazil Bourbon</a> |
+          <a href="#">Colombia Supremo</a> |
+          <a href="#">Belgian Chocolatier</a>
+        </nav>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main>
+        <!-- SECTION 1: Saralash -->
+         <form action="#" method="get" class="filter-form">
+         <h2>1. Toifalar bo'yicha saralash</h2>
+        <fieldset id="katalog" class="yozish">
+          <legend>Tanlov parametrlari </legend>
+          <form action="#" method="get" >
+            
+            
+              <label for="category" >Mahsulot yoki nav qidirish:</label>
+              <input  class="form-control" type="text" id="search" name="search" placeholder="Masalan: Arabica, Belgiya"/>
+              <br><br>  
+
+
+
+
+              <label for="category">Toifa bo'yicha saralash:</label>
+              <select id="category" name="category" class="form-control">
+                <option value="">Barchasi...</option>
+                <option value="coffee">Qahva donalari</option>
+                <option value="chocolate"> Elita Shokoladlar</option>
+                <option value="accessories">Tayorlash aksessuarlari</option>
+                </select>
+                <br><br>
+
+
+                <label for="radio">Uchratish darajasi (Eksklyuzivlik)</label>
+                <hr>
+                <br>
+                
+                <input type="radio" id="radio1" name="radio" value="1" />  <label for="radio1">Doimiy kolektsya</label>
+               
+                
+                <input type="radio" id="radio2" name="radio" value="2" />
+                <label for="radio2">Mavsumiy / Cheklangan miqdorda (Limited)</label>
+                
+                <br><br>
+
+                <input type="checkbox" id="check" name="check" value="1" />
+                <label for="check">Faqat yangi qovurilgan partiyalar (yangi hosil)</label>
+                <br><br>
+
+                <input type="submit" value="Saralash" class="btn " /> 
+                <button type="reset" class="btn ">Tozalash</button>
+
+          </form>
+        </fieldset>
+        </form>
+
+        <!-- SECTION 2: Premium Kollektsiya -->
+        <section class="kollektsiya">
+          <h2>2. Maxsus Premium Kollektsiya</h2>
+
+          <p class="section-subtitle">
+            Yangi qovurilgan va nozik tatli qahvalar
+          </p>
+
+          <div class="products-grid">
+            <!-- Card 1 -->
+            <div class="product-card">
+              <div>
+                <div class="card-img-wrapper">
+                  <img
+                    alt="Ethiopia Yirgacheffe"
+                    src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300"
+                  />
+                </div>
+                <h3>Ethiopia Yirgacheffe</h3>
+                <p>
+                  Tsitrus mevalari va gulli notalarga boy, 100% yuvilgan toza
+                  Arabica donalari.
+                </p>
+              </div>
+              <div>
+                <div class="price-box">
+                  <span class="old-price">340 000 so'm</span>
+                  <span class="current-price">290 000 so'm</span>
+                </div>
+                <div class="card-links">
+                  <a href="#">Batafsil ma'lumot</a> |
+                  <a href="#buyurtma">Buyurtma</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="product-card">
+              <div>
+                <div class="card-img-wrapper">
+                  <img
+                    alt="Colombia Supremo"
+                    src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=300"
+                  />
+                </div>
+                <h3>Colombia Supremo</h3>
+                <p>
+                  Suyuq karamel va shirin shokolad iforiga ega, o'rta darajada
+                  qovurilgan mumtoz qahva.
+                </p>
+              </div>
+              <div>
+                <div class="price-box">
+                  <span class="old-price">280 000 so'm</span>
+                  <span class="current-price">250 000 so'm</span>
+                </div>
+                <div class="card-links">
+                  <a href="#">Batafsil ma'lumot</a> |
+                  <a href="#buyurtma">Buyurtma</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="product-card">
+              <div>
+                <div class="card-img-wrapper">
+                  <img
+                    alt="Brazil Yellow Bourbon"
+                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300"
+                  />
+                </div>
+                <h3>Brazil Yellow Bourbon</h3>
+                <p>
+                  Yong'oq va asalli ta'm profili bilan ajralib turuvchi noyob
+                  sariq rangli kofe rezavorlari.
+                </p>
+              </div>
+              <div>
+                <div class="price-box">
+                  <span class="current-price">310 000 so'm</span>
+                </div>
+                <div class="card-links">
+                  <a href="#">Batafsil ma'lumot</a> |
+                  <a href="#buyurtma">Buyurtma</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="section-subtitle">
+            Qo'lda tayyorlangan Belgiya va Shveytsariya shokoladlari
+          </p>
+
+          <div class="products-grid">
+            <!-- Card 4 -->
+            <div class="product-card">
+              <div>
+                <div class="card-img-wrapper">
+                  <img
+                    alt="Belgian Dark 85%"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR71zm7CCfiK-xy8gwF3PHGeHh3dPj5IWS0U-aSugi1hQ&s=10"
+                  />
+                </div>
+                <h3>Belgian Artisan Dark 85%</h3>
+                <p>
+                  Haqiqiy kakao moyidan tayyorlangan, shakar miqdori
+                  kamaytirilgan achchiq shokolad.
+                </p>
+              </div>
+              <div>
+                <div class="price-box">
+                  <span class="old-price">180 000 so'm</span>
+                  <span class="current-price">150 000 so'm</span>
+                </div>
+                <div class="card-links">
+                  <a href="#">Batafsil ma'lumot</a> |
+                  <a href="#buyurtma">Buyurtma</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="product-card">
+              <div>
+                <div class="card-img-wrapper">
+                  <img
+                    alt="Swiss Milk Hazelnut"
+                    src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=300"
+                  />
+                </div>
+                <h3>Swiss Milk &amp; Hazelnut</h3>
+                <p>
+                  Yumshoq alp suti va butun o'rmon yong'oqlari qo'shilgan
+                  klassik shokolad plitkasi.
+                </p>
+              </div>
+              <div>
+                <div class="price-box">
+                  <span class="current-price">130 000 so'm</span>
+                </div>
+                <div class="card-links">
+                  <a href="#">Batafsil ma'lumot</a> |
+                  <a href="#buyurtma">Buyurtma</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="section-subtitle">Qahva damlash va tayyorlash anjomlari</p>
+
+          <div class="products-grid">
+            <!-- Card 6 -->
+            <div class="product-card">
+              <div>
+                <div class="card-img-wrapper">
+                  <img
+                    alt="Ceramic Coffee Dripper V60"
+                    src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=300"
+                  />
+                </div>
+                <h3>Ceramic V60 Dripper</h3>
+                <p>
+                  Haroratni mukammal saqlab beruvchi, konus shaklidagi yapon
+                  keramik kofe suzgichi.
+                </p>
+              </div>
+              <div>
+                <div class="price-box">
+                  <span class="old-price">390 000 so'm</span>
+                  <span class="current-price">350 000 so'm</span>
+                </div>
+                <div class="card-links">
+                  <a href="#">Batafsil ma'lumot</a> |
+                  <a href="#buyurtma">Buyurtma</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="product-card">
+              <div>
+                <div class="card-img-wrapper">
+                  <img
+                    alt="Glass Gooseneck Kettle"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4CkpC4eElXyeat563oqjXZ0Vu9KjYRDfl1rr3ZFmN3w&s=10"
+                  />
+                </div>
+                <h3>Gooseneck Glass Kettle</h3>
+                <p>
+                  Suv quyish tezligi va yo'nalishini aniq nazorat qilish
+                  imkonini beruvchi ingichka burunli choynak.
+                </p>
+              </div>
+              <div>
+                <div class="price-box">
+                  <span class="current-price">420 000 so'm</span>
+                </div>
+                <div class="card-links">
+                  <a href="#">Batafsil ma'lumot</a> |
+                  <a href="#buyurtma">Buyurtma</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: Jadval -->
+        <fieldset id="solishtirish" class="yozish">
+          <h2>3. Mahsulotlarning ta'm xususiyatlari va parametrlari</h2>
+          <div class="table-responsive">
+            <table border="1" cellpadding="8" cellspacing="0">
+              <caption>
+                Asosiy kollektsiyaning ta'm tahlili jadvali
+              </caption>
+              <thead>
+                <tr>
+                  <th>Ko'rinishi</th>
+                  <th>Mahsulot nomi</th>
+                  <th>Turi / Kelib chiqishi</th>
+                  <th>Kislotalik / Tarkibi</th>
+                  <th>Paket hajmi</th>
+                  <th>Narxi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      alt="Mini Ethiopia"
+                      src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=80"
+                    />
+                  </td>
+                  <td><strong>Ethiopia Yirgacheffe</strong></td>
+                  <td>Monosort Arabica (Efiopiya)</td>
+                  <td>Yuqori (Tsitrusli)</td>
+                  <td>250 gr (Donali)</td>
+                  <td>290 000 so'm</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      alt="Mini Colombia"
+                      src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=80"
+                    />
+                  </td>
+                  <td><strong>Colombia Supremo</strong></td>
+                  <td>Monosort Arabica (Kolumbiya)</td>
+                  <td>O'rta (Yumshoq)</td>
+                  <td>250 gr (Yanchilgan)</td>
+                  <td>250 000 so'm</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      alt="Mini Brazil"
+                      src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=80"
+                    />
+                  </td>
+                  <td><strong>Brazil Yellow Bourbon</strong></td>
+                  <td>Monosort Arabica (Braziliya)</td>
+                  <td>Past (Shokoladli)</td>
+                  <td>250 gr (Donali)</td>
+                  <td>310 000 so'm</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      alt="Mini Belgian"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR71zm7CCfiK-xy8gwF3PHGeHh3dPj5IWS0U-aSugi1hQ&s=10"
+                    />
+                  </td>
+                  <td><strong>Belgian Artisan Dark</strong></td>
+                  <td>To'q shokolad (Belgiya)</td>
+                  <td>85% Kakao miqdori</td>
+                  <td>100 gr</td>
+                  <td>150 000 so'm</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      alt="Mini Swiss"
+                      src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=80"
+                    />
+                  </td>
+                  <td><strong>Swiss Milk &amp; Hazelnut</strong></td>
+                  <td>Sutli shokolad (Shveytsariya)</td>
+                  <td>Alp suti &amp; Yong'oqlar</td>
+                  <td>100 gr</td>
+                  <td>130 000 so'm</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      alt="Mini Dripper"
+                      src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=80"
+                    />
+                  </td>
+                  <td><strong>Ceramic V60 Dripper</strong></td>
+                  <td>Brewing aksessuari (Yaponiya)</td>
+                  <td>Issiqlik tutuvchi keramik</td>
+                  <td>1 dona (O'lcham 02)</td>
+                  <td>350 000 so'm</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      alt="Mini Kettle"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4CkpC4eElXyeat563oqjXZ0Vu9KjYRDfl1rr3ZFmN3w&s=10"
+                    />
+                  </td>
+                  <td><strong>Gooseneck Glass Kettle</strong></td>
+                  <td>Brewing aksessuari</td>
+                  <td>Chidamli borosilikat shisha</td>
+                  <td>600 ml sig'im</td>
+                  <td>420 000 so'm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </fieldset>
+
+        <!-- SECTION 4: Buyurtma formasi -->
+        <fieldset id="buyurtma" class="yozish">
+          <h2>4. Butikdan tezkor buyurtma berish</h2>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Ism va Familiya:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                placeholder="Ismingizni kiriting"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Telefon raqam:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form-control"
+                placeholder="+998 90 123 45 67"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="product">Tanlangan mahsulot:</label>
+              <select id="product" name="product" class="form-control" required>
+                <option value="">Mahsulotni tanlang...</option>
+                <option value="ethiopia">
+                  Ethiopia Yirgacheffe - 290 000 so'm
+                </option>
+                <option value="colombia">
+                  Colombia Supremo - 250 000 so'm
+                </option>
+                <option value="brazil">
+                  Brazil Yellow Bourbon - 310 000 so'm
+                </option>
+                <option value="belgian">
+                  Belgian Artisan Dark 85% - 150 000 so'm
+                </option>
+                <option value="swiss">
+                  Swiss Milk & Hazelnut - 130 000 so'm
+                </option>
+                <option value="dripper">
+                  Ceramic V60 Dripper - 350 000 so'm
+                </option>
+                <option value="kettle">
+                  Gooseneck Glass Kettle - 420 000 so'm
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Yetkazib berish manzili:</label>
+              <textarea
+                id="address"
+                name="address"
+                class="form-control"
+                placeholder="Shahar, ko'cha, uy raqami..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="delivery-date">Yetkazib berish muddati:</label>
+              <input
+                type="date"
+                id="delivery-date"
+                name="delivery-date"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <label for="radio">To'lov turi:</label><br>
+            <input type="radio" id="radio1" name="radio" value="1" />
+            <label for="radio1">Naqd pul</label><br>
+            <input type="radio" id="radio2" name="radio" value="2" />
+            <label for="radio2">Bank kartasi</label><br>
+
+            <button type="submit" class="btn">
+              Buyurtmani tasdiqlash
+            </button>
+          </form>
+        </fieldset>
+
+        <!-- SECTION 5: Aloqa / Fikr-mulohaza -->
+        <fieldset id="fikr-mulohaza" class="yozish">
+          <h2>5. Mutaxassis maslahati va takliflar</h2>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="email">Elektron pochta:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="example@mail.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Xabar yoki savolingiz:</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-control"
+                placeholder="Savolingizni bu yerga yozing..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Xabarni yuborish</button>
+          </form>
+        </>
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>
+          © 2026 Aroma &amp; Co. Boutique.
+          <span>Barcha mahsulotlar sertifikatlangan.</span>
+        </p>
+        <p>Concept &amp; Design: Premium Taste Lab</p>
+      </footer>
+    </div>
+  </body>
+</html>

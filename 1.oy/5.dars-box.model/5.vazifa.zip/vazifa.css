@@ -1,0 +1,327 @@
+/* Umumiy uslublar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", Verdana, sans-serif;
+  background-color: #f4efe9;
+  color: #2c221e;
+  line-height: 1.6;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+
+  padding: 0 0 30px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #968f99;
+  color: #ece8e8;
+  border-radius: 7px;
+  margin: 10px;
+
+  font-weight: 600;
+}
+
+/* Header qismi va uning background kodi */
+header {
+  background: url("https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1200")
+    center/cover no-repeat;
+  color: #f3e5ab;
+  text-align: center;
+  padding: 60px 20px 40px;
+  border-bottom: 4px solid #c59b27;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-family: "Georgia", serif;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+header p {
+  font-size: 1.15rem;
+  color: #e2c97c;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  font-style: italic;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 8px;
+  display: inline-block;
+
+  border: 1px solid rgba(226, 201, 124, 0.3);
+}
+
+nav strong {
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+nav a {
+  color: #f3e5ab;
+}
+
+/* Main va Section qismlari */
+main {
+  padding: 40px 30px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-family: "Georgia", serif;
+  color: #4a3525;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #e0d0c1;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* Toifalar bo'yicha saralash (Section 1) */
+
+.filter-form {
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  padding: 26px;
+  border-radius: 10px;
+}
+
+.yozish {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 26px;
+  background-color: #edefef;
+  margin: 30px;
+}
+
+.filter-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #4a3525;
+}
+
+.category-filter {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  background-color: #f4efe9;
+  border: 1px solid #d4c4b5;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #000000;
+  
+  font-weight: 600;
+  
+}
+
+
+/* Maxsus Premium Kollektsiya (Section 2) */
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #7a5c43;
+  margin: 25px 0 15px;
+  font-weight: 600;
+  border-left: 5px solid #a78758;
+  background-color: #dbc9b2;
+}
+
+.products-grid {
+  display: inline-block;
+  
+  
+}
+
+
+
+.product-card {
+  background: #ffffff;
+  border: 1px solid #e8decb;
+  border-radius: 10px;
+  padding: 20px;
+  display: inline-block;
+  width: 30%;
+  min-height: 100%;
+  margin: 0 15px 15px 0;
+}
+
+
+
+.card-img-wrapper {
+  width: 100%;
+  height: 180px;
+  
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.product-card h3 {
+  font-size: 1.25rem;
+  color: #2c221e;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  color: #665244;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  
+}
+
+.price-box {
+  margin-bottom: 15px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #a08c7d;
+  margin-right: 10px;
+  font-size: 0.95rem;
+}
+
+.current-price {
+  color: #b84b28;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.card-links a {
+  color: #4a3525;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+
+
+/* Jadval qismi (Section 3) */
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #ffffff;
+}
+
+caption {
+ 
+  text-align: left;
+  font-weight: bold;
+  color: #5a4332;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+th,
+td {
+  border: 1px solid #d4c4b5;
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #4a3525;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+
+td img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Formalar (Section 4 va 5) */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #3b2c22;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #c8b8a8;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fcfbfa;
+  color: #2c221e;
+}
+
+
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  background-color: #4a3525;
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+
+/* Footer */
+footer {
+  background-color: #2c221e;
+  color: #b8a698;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 0.95rem;
+  border-top: 3px solid #c59b27;
+}
+
+footer span {
+  color: #e2c97c;
+}
+
+footer p {
+  margin: 5px 0;
+}

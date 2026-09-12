@@ -1,0 +1,109 @@
+/* Sahifani markazga keltirish */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.cards {
+ 
+ 
+  
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  gap: 20px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Asosiy karta (Flexbox) */
+.card {
+  background: white;
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  
+  border: 1px solid #151414;
+}
+
+/* Rasm-1 */
+.profile-img {
+  width: 100%;
+  height: 200px;
+  padding: 0px;
+  object-fit: cover;
+}
+
+/* Matnlar */
+h2 {
+  color: rgb(234, 227, 227);
+  font-size: 22px;
+  padding: 10px;
+}
+
+.text {
+  color: rgb(160, 152, 152);
+  font-size: 13px;
+  margin: 0;
+  padding: 10px;
+}
+
+/* Ikonkalar */
+.icon {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.icon i {
+  margin: 0 5px;
+  color: #191b1c;
+}
+
+.btn-1{
+    
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    align-content: center;
+    padding:  5px 20px;
+    width: 80%;
+}
+
+.btn{
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    
+    
+    border-radius: 30px;
+}
+
+.card button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    margin: 50px auto;
+    
+}
+
+.red{
+    background-color: red;
+}
+

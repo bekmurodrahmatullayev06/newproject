@@ -1,0 +1,79 @@
+/* Sahifani markazga keltirish */
+body {
+  background: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* Asosiy karta (Flexbox) */
+.card {
+  background: white;
+  width: 300px;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Rasm */
+.profile-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Matnlar */
+h2 { 
+  margin: 0; 
+  font-size: 22px; 
+}
+
+.job { 
+  color: gray; 
+  font-size: 14px; 
+  margin: 0;
+}
+
+.text { 
+  color: #555; 
+  font-size: 13px; 
+  margin: 0; 
+}
+
+/* Ikonkalar */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icons a {
+  width: 35px;
+  height: 35px;
+  background: #f0f0f0;
+  color: #555;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Tugma */
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}

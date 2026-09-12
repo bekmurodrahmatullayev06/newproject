@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Interaktiv o'quvchilar ro'yxati</title>
+  <link rel="stylesheet" href="./imtihon.css">
+  
+</head>
+<body>
+
+  <header>
+    <h1>O'quvchilar ro'yxati</h1>
+  </header>
+
+  <main>
+    <!-- Ro'yxat bo'limi -->
+    <section class="card">
+      <h2>Ro'yxat</h2>
+      <ul id="studentList"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Boshqarish</h2>
+      <div class="btn-group">
+        <button id="addBtn">Qo'shish</button>
+        <button id="removeBtn">Oxirgisini o'chirish</button>
+      </div>
+      <p id="message"></p>
+    </section>
+
+    <section class="card">
+      <h2>Qidirish</h2>
+      <div class="btn-group">
+        <button id="searchAliBtn">Ali ni qidir</button>
+        <button id="searchValiBtn">Vali ni qidir</button>
+        <button id="searchSardorBtn">Sardor ni qidir</button>
+      </div>
+      <p id="searchResult"></p>
+    </section>
+
+    <section class="card">
+      <h2>Qo'shimcha</h2>
+      <div class="btn-group">
+        <button id="colorBtn">Rangni o'zgartir</button>
+      </div>
+      <p id="counter">Bosilgan soni: 0</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>O'quvchi Rahmatullayev Bekmurod | 2026-yil</p>
+  </footer>
+<script src="./script.js" defer></script>
+</body>
+</html>

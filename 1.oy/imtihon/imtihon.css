@@ -1,0 +1,89 @@
+/* 1. Teg selektori: Sahifa umumiy ko'rinishi va shriftai */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Header va sarlavha ko'rinishi */
+header h1 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* 2. Class selektori: Har bir section (card) box-modeli */
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 15px auto;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #34495e;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Ro'yxat elementlari uchun qulay joylashuv va masofa */
+#studentList {
+  padding-left: 20px;
+  margin: 0;
+}
+
+#studentList li {
+  padding: 4px 0;
+}
+
+/* 3. Flexbox yordamida tugmalarni tekis joylashtirish */
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Tugmalar dizayni */
+button {
+  flex: 1;
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Tugmalarga hover holati */
+button:hover {
+  background-color: #2980b9;
+}
+
+/* 4. ID selektorlari: Natija va xabarlar ko'rinishi */
+#message, 
+#searchResult, 
+#counter {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 0;
+  color: #e74c3c;
+}
+
+/* Footer qismi dizayni */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #7f8c8d;
+  font-size: 14px;
+}

@@ -1,0 +1,112 @@
+/* Sahifani markazga keltirish */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.cards {
+ background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1wlnegSmCqS7fYV9CckhNvuo3IOgpOIc9C7EBtk0zQ&s=10);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  gap: 20px;
+  border-radius: 5px;
+
+}
+
+/* Asosiy karta (Flexbox) */
+.card {
+  background: white;
+  width: 300px;
+
+  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #ddd;
+}
+
+/* Rasm-1 */
+.profile-img {
+  width: 100%;
+  height: 200px;
+  padding: 0px;
+  object-fit: cover;
+}
+
+
+
+/* Matnlar */
+h2 {
+  margin: 0;
+  font-size: 22px;
+  padding:  10px;
+}
+
+.job {
+  color: red;
+  font-size: 10px;
+  margin: 0;
+}
+
+/* 2-item: job */
+.pink {
+  color: rgb(219, 19, 52);
+  font-size: 10px;
+  margin: 0;
+}
+
+/* 3-item: job */
+
+.green {
+  color: green;
+  font-size: 10px;
+  margin: 0;
+}
+
+
+.text {
+  color: #555;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Ikonkalar */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icons a {
+  width: 35px;
+  height: 35px;
+  background: #f0f0f0;
+  color: #555;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* ko'rganlar */
+
+
+.korish {
+  width: 100%;
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-around;
+}
+
+

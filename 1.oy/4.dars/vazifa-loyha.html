@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-dars.Vazifa Loyhasi</title>
+    <style>
+        th{
+            text-align: center;
+            background-color: rgb(128, 0, 32);
+            color: aliceblue;
+            }
+            .align{
+                text-align: center;
+            }
+        td{
+            text-align: center; 
+        }
+        .qizil{
+            color:rgb(128, 0, 32);
+        }
+
+        .decoration{
+            text-decoration:overline;
+            text-transform: uppercase;
+        }
+
+        .decorations{
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+        .title{
+            color: blue;
+            text-align: center;
+            font-size: 46px;
+            text-transform:capitalize;
+        }
+        .subtitle{
+            color: red;
+        }
+        
+        .footer{
+            color: rgb(184, 136, 106);
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 class="qizil ">Zamonaviy Texnologiyalar va yuqori sifatli mahsulotlar</h1>
+    <br>
+    <p class="subtitle"> Barcha zamonaviy texnologiyalarni topish mumkin</p>
+    
+    
+     <nav class="main-navigation">
+           <p class="decoration"><b>sahifa bo'limlari</b></p>
+           <a href="#kategoriyalar">2. Mahsulot kategoriyalari</a>||
+           <a  href="#xususyatlari">3. Mahsulot xususiyatlari</a>||
+           <a href="#Buyurtma-berish">4. Buyurtma berish</a>||
+           <a href="#fikr-mulohaza">5. Murojat va Aloqa</a>
+        </nav>
+        <hr>
+        
+                  
+                <div>
+                    <h4 class="decorations"><b>Hamkorlarimiz rasmiy saytilari</b></h4><a href="https://www.apple.com/" target="_blank">Apple</a>
+            
+                <a href="https://www.samsung.com/" target="_blank"  >Samsung</a>
+            
+                <a href="https://www.microsoft.com/" target="_blank">Microsoft</a>
+            
+                <a href="https://www.sony.com/" target="_blank">Sony</a></div>
+            
+        <hr>
+        <br>
+        <h2 class="title">Mahsulotlarni qidirish va filtirlash</h2>
+
+        <fieldset>
+            <legend>
+                <p>Qidiruv parametrlari</p>
+            </legend>
+            <form action="search_results.html" method="get">
+                <label for="nomi">Mahsulot nomi:</label>
+                <input type="text" id="nomi" name="nomi" placeholder="Mahsulot nomini kiriting"><br><br>
+                <label for="kategoriya">Kategoriyani tanlang:</label>
+                <select id="kategoriya" name="kategoriya">
+                    <option value="">Biror kategoriyani tanlang</option>
+                    <option value="telefon">Telefon</option>
+                    <option value="kompyuter">Kompyuter</option>
+                    <option value="planshet">Planshet</option>
+                </select>
+                <br><br>
+                <label for="narx">Narx oralig'ini tanlang:</label><br>
+                <input type="radio" id="narx1" name="narx" value="0-100000">
+                <label for="narx1">0-100,000</label><br>
+                <input type="radio" id="narx2" name="narx" value="100000-500000">
+                <label for="narx2">100,000-500,000</label><br>
+                <input type="radio" id="narx3" name="narx" value="500000+">
+                <label for="narx3">500,000+</label>
+                <br><br>
+                <input type="checkbox" id="brand1" name="brand" value="Apple">
+                <label for="brand1">Faqat do'konda mavjud bolgan mahsulotlar</label><br>
+                <br>
+                <input type="submit" value="Qidirish">
+                <button type="reset">Tozalash</button>
+
+            </form>
+        </fieldset>
+
+        <!--2-mahsulot ro'yhati-->
+
+        <hr>
+        <h2 id="kategoriyalar" class="title">2. Mahsulotlar ro'yxati</h2>
+        <p class="qizil" style="text-decoration: overline ;">Telefonlar va noutbooklar</p>
+        <img src="https://crdms.images.consumerreports.org/f_auto,w_600/prod/products/cr/models/419248-smartphones-apple-iphone-17-pro-256gb-10048484.png " width="300">
+
+        <h3 class="qizil">iPhone 15 Pro</h3>
+
+        <p>zamonaviy kamera, titan korpus va tezkor A17 Pro protsessoriga ega flagman smartfon.</p>
+        <br>
+        <p><strong>Narxi:</strong>  <span style="text-decoration: line-through;">16 000 000 so'm</span> <span class="qizil">15 500 000 so'm</span></p>
+        <a href="https://www.apple.com/" target="_blank">Apple saytida mahsulot haqida batafsil malumot|</a> 
+        <a href="#Buyurtma-berish">Buyurtma berish</a> 
+
+
+
+        <hr><!--noutbook-->    
+
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnZpkk9aSPXzo5HXAv5QBlO7viDUcMGIQKYZ86zC5L7Q&s=10"width=300>
+
+        <h2 class="qizil">Macbook Air M3</h2>
+
+        <p> O'ta yupqa, shovqinsiz ishlaydigan va batareyasi bir kunga yetadigan kuchli noutbook</p>
+        <br>
+        <p><b>Narx:</b> 14 000 000 so'm</p>
+        <br>
+        <a href="https://www.google.com/search?q=aple+noutbook&oq=aple+noutbook&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQABgNGIAEMgkIAhAAGA0YgAQyCQgDEAAYDRiABDIJCAQQABgNGIAEMgkIBRAAGA0YgAQyCQgGEAAYDRiABDIJCAcQABgNGIAEMgkICBAAGA0YgAQyCQgJEAAYDRiABNIBCTk1MTRqMGoxNagCCLACAQ&sourceid=chrome&source=chrome.rb&ie=UTF-8 target="_blank">Apple saytida noutbuk haqida batafsil ma'lumot|</a>
+        <a href="#Buyurtma-berish">Buyurtma berish</a> 
+        <br><hr>
+        <!--samsung-->
+
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQaTv-iFRD6F-zmjfP2Sll7Mrq5MdheuTWYv1Ly2bW03Yhdt_xP5OHvfkwnV0iUPovPavYfExuZfZkwTEYhEk91RZMqtZFgc7wZ9m8JVYg5pzsWtJAPER20DhCNOFYBay-O&usqp=CAc" width="300">
+        <br><br>
+        <h3>Samsung Galaxy S24 Ultra</h3>
+        <br>
+        <p>Sun'iy intellek (Galaxy AI) imkoniyatlariga ega va 200MP kamerali smartfon </p>
+
+        <p><b>Narxi:</b> 16 000 000 so'm</p>
+
+        <br>
+        <a href="https://www.google.com/search?q=samsung+galaxy+s22+ultra+rasmy+web+sayti&sca_esv=6a6c679fd8c04595&udm=2&biw=767&bih=730&sxsrf=APpeQnuXnr5ycnzi7A_7gDGEv27MW7ZIWw%3A1784922540093&ei=rMFjarmqBayiwPAP-7_6kAE&ved=0ahUKEwi5sNDPiuyVAxUsERAIHfufHhIQ4dUDCBE&uact=5&oq=samsung+galaxy+s22+ultra+rasmy+web+sayti&gs_lp=Egtnd3Mtd2l6LWltZyIoc2Ftc3VuZyBnYWxheHkgczIyIHVsdHJhIHJhc215IHdlYiBzYXl0aUjcJ1DJCVjaIHABeACQAQCYAfQBoAHbD6oBBTAuNC42uAEDyAEA-AEBmAIAoAIAmAMAiAYBkgcAoAd4sgcAuAcAwgcAyAcAgAgB&sclient=gws-wiz-img target="_blank">Samsung sayti smartfoni haqda batafsil malumot|</a>
+        <a href="#Buyurtma-berish">Buyurtma berish</a> 
+        <br><hr>
+
+        <!--Redmi-->
+        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=200">
+        <br><br>
+
+        <h3 class="qizil">Redmi Note 13 Pro</h3>
+        <br><br>
+        <p>Intellektual (Redmi AI) imkoniyatlariga ega va 200MP kamerali smartfon </p>
+        <p><b>Narxi:</b><span style="text-decoration: line-through"> 4 900 000 so'm</span> 4 500 000 so'm</p>
+        <br>
+        <a href="https://www.mi.com/redmi-note-13-pro/targets/Redmi+Note+13+Pro?channel=pc&country=UZ" target=_blank>Redmi sayti smartfoni haqda batafsil ma'lumot|</a>
+        <a href="#Buyurtma-berish">Buyurtma berish</a> 
+        <br><hr>
+
+
+        <!---->
+
+
+
+
+
+        <!--Aksessuarlar-->
+
+        <h1 class="qizil decoration"> Eksklyuziv Aksessuarlar</h1>
+        <br><br>
+        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=200">
+        <br><br>
+        <h3 class="qizil decoration">Apple watch Series 9</h3>
+        <br><br>
+        <p>Sog'liqni kuzatuvchi tizimlar. fitnis  datchiklari va doimy faol displayga  ega  aqli soat </p>
+        <p><b>Narxi:</b> 4 100 000 so'm</p>
+        <br>
+        <a href="https://www.sony.com/ target=_blank">Apple Watchhaqda batafsil ma'lumot|</a> 
+        <a href="#Buyurtma-berish">Buyurtma berish</a>  
+
+        <br><hr>
+
+        <!-- Quloqchinlar-->
+
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200">
+        <br><br>
+
+        <h1 class="qizil ">Sony WH-1000XM5</h1>
+        <br>
+        <p>Quloqchinlar haqda batafsil ma'lumot</p>
+        <p><b>Narxi:</b> 1 500 000 so'm</p>
+        <br>
+        <a href="https://www.sony.com.tr/phones/headphones/wh-1000xm5 target=_blank">Sony sayti quloqchini haqda batafsil ma'lumot|</a>
+        <a href="#Buyurtma-berish">Buyurtma berish</a> 
+        <br><hr>
+
+
+
+        
+        
+        
+        
+        
+        <h2 id="xususyatlari" class="title">3.Texnik xususyatlarni solishtirish jadvali</h2>
+
+
+      <p class="qizil align decoration  ">Mahsulotlarni kengaytirilgan solishtirma jadvali</p>
+        <table border="1">
+            <tr>
+                <th>Mahsulot rasmi</th>
+                <th>Nomi</th>
+                <th>Turi/operation tizimi</th>
+                <th>Xotira xususiyati   </th>
+                <th>Narxi</th>
+                <th>Brend sayti</th>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://crdms.images.consumerreports.org/f_auto,w_600/prod/products/cr/models/419248-smartphones-apple-iphone-17-pro-256gb-10048484.png " width="100">
+                </td>
+                <td>
+                    iPhone
+                     15Pro
+                </td>
+                <td>
+                    iOS
+                </td>
+                <td>
+                    256GB
+                </td>
+                <td>
+                    15 500 000 so'm
+                </td>
+                <td>
+                    <a href="https://www.apple.com/"  target="_blank">apple.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnZpkk9aSPXzo5HXAv5QBlO7viDUcMGIQKYZ86zC5L7Q&s=10" width="100px">
+                </td>
+                <td>
+                    MacBook Air M3
+                </td>
+                <td>
+                    macOS
+                </td>
+                <td>
+                    512GB SSD
+                </td>
+                <td>
+                    14 000 000 so'm
+                </td>
+                <td>
+                    <a href="https://www.apple.com/uz/"  target="_blank">Noutbook</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQaTv-iFRD6F-zmjfP2Sll7Mrq5MdheuTWYv1Ly2bW03Yhdt_xP5OHvfkwnV0iUPovPavYfExuZfZkwTEYhEk91RZMqtZFgc7wZ9m8JVYg5pzsWtJAPER20DhCNOFYBay-O&usqp=CAc" width="100">
+                </td>
+                <td>
+                    Samsung Galaxy S24 Ultra
+                </td>
+                <td>
+                    Androit
+                </td>
+                <td>
+                    256GB
+                </td>
+                <td>
+                    16 000 000 so'm
+                </td>
+                <td>
+                    <a href="https://www.google.com/search?q=samsung+galaxy+s22+ultra+rasmy&oq=&gs_lcrp=EgZjaHJvbWUqCQgDEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQkyMDAzajBqMTWoAgiwAgE&sourceid=chrome&source=chrome.rb&ie=UTF-8">samsung.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=80" width="100"></td>
+                <td>Redmi note  13Pro</td>
+                <td>Smartfon (Android)</td>
+                <td>256GB</td>
+                <td>4 500 000 so'm</td>
+                <td><a href="https://www.mi.com/uz/"  target="_blank">mi.com</a></td>
+            </tr>   
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=80" width="100"></td>
+                <td>Apple Watch Series 9</td>
+                <td>Aqli soat (watchOS)</td>
+                <td>Sog'liq datchiklari</td>
+                <td>4 5 800 000 so'm</td>
+                <td><a href="https://www.apple.com/" target="_blank">apple.com</a></td>
+            </tr>
+
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80" width="100">   </td>
+                <td>sony WH-1000XM5</td>
+                <td>Quloqchin</td>
+                <td>Active Noise Cancelling</td>
+                <td>4 100 000 so'm</td>
+                <td><a href="https://www.sony.com/ target="_blank">sony.com</a></td>
+            </tr>
+
+        </table>
+        <hr>
+        <br>
+        <h2 id="Buyurtma-berish" class="title">
+            4.Mahsulot sotib olish va buyurtma berish
+        </h2>
+
+        <br>
+
+        <fieldset>
+            <legend>
+                <p>Buyurtma va yetkazib berish ma'lumotlari</p>
+            </legend>
+            <form>
+            <label for="ism">Ism va Familyasi</label>
+            <input type="text" id="ism" placeholder="Masalan: Dilshod Bo'riyev"><br><br>
+            <label for="nomber">Telefon raqamingiz</label>
+            <input type="number" id="nomber" placeholder="+998 90 123 45 67"><br>
+            <br>
+            <label for="phone">Mahsulotlarni tanlang</label>
+            <select >
+                <option>
+                    iPhone 15Pro
+
+                </option>
+                <option>
+                    S24
+                </option>
+                <option>
+                    samasung
+
+                </option>
+
+            </select>
+            <br>
+            <br>
+            <label for="radio">To'lov usuli:</label><br>
+            <input type="radio"   id="radio" name="usullar" checked>
+            <label for="radio"  >Naqt pul (mahsulot olganda)
+            </label><br>
+            <input type="radio" id="radio" name="tanlov">
+            <label for="radio:">Karta orqali online(Click,Payme)</label>
+            <br>
+            <br>
+            
+            https://www.apple.com/
+            
+            <input type="submit"  value="Buyurtma berish">
+            
+            <input type="reset" value="Tozalash">
+            <br>
+
+            </form>
+        </fieldset>
+        <hr><br>
+
+
+        <h2 id ="fikr-mulohaza" class="title">
+            5. Biz bilan aloqa va Fikr-mulohaza
+        </h2>
+        <br>
+<br>
+        
+
+
+     <fieldset>
+        <legend>Murojatingizni qoldiring</legend>
+        <from>
+            <label for="email">Email manzilingiz(ixtiyoriy)</label><br>
+            <input type="email" id="email" placeholder="example@mail.com" value=""><br><br>
+            <br>
+            <br>
+            <label for="subject">Murojat turi:</label><br>
+            <select >Murojat turi
+            <option>
+                savol yoki Yordam
+            </option>
+            <option>
+                Fikr-mulohaza
+            </option>
+            <option>
+                Taklif
+            </option>
+            <option>
+                Biz bilan aloqa
+            </option>
+            <option>
+                Shikoyat
+            </option>
+           
+                </select>
+                <br>
+                <br>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Murojatingizni qoldiring"></textarea>
+                <br>
+                <input type="submit" value="Yuborish">
+                <input type="reset" value="Tozalash">
+                    
+        </from>
+     </fieldset>
+     <br>
+     <div class="footer">
+      
+     <span>&copy; 2026 PremiumTexno-Do'kon. </span> <a href="#">Barcha huquqlar himoyalangan</a>
+       <p><span class="qizil">Loyhalash:</span> Premium Web Studio</p>
+        
+     </div>
+    </body>
+</html>
