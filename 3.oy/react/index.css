@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    
+}
+
+.it1{
+    background-color: rgb(128, 0, 32);
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+.it2{
+    background-color: rgb(128, 0, 32);
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+.it3{
+    background-color: rgb(128, 0, 32);
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
