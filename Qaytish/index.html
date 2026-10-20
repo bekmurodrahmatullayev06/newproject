@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0c1028">
+  <title>Kosmik qochish — Arkada o‘yini</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+    :root {
+      color-scheme: dark;
+      font-family: "DM Sans", sans-serif;
+      color: #f6f3ff;
+      background: #080a18;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      --muted: #9a9cb8;
+      --purple: #a88bff;
+      --cyan: #72efff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      padding: 30px 18px;
+      background:
+        radial-gradient(ellipse at 50% 4%, rgba(106, 75, 178, 0.18), transparent 42%),
+        #080a18;
+    }
+
+    button { font: inherit; }
+
+    .page {
+      width: min(100%, 840px);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 0 auto 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      border: 1px solid rgba(181, 158, 255, 0.3);
+      border-radius: 14px;
+      background: linear-gradient(145deg, rgba(168, 139, 255, 0.2), rgba(114, 239, 255, 0.08));
+      font-size: 23px;
+    }
+
+    h1, p { margin: 0; }
+
+    h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(18px, 4vw, 24px);
+      letter-spacing: -0.7px;
+    }
+
+    .subtitle {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .actions { display: flex; gap: 8px; }
+
+    .action-button {
+      min-height: 40px;
+      padding: 0 13px;
+      border: 1px solid rgba(197, 192, 236, 0.14);
+      border-radius: 11px;
+      color: #e8e4ff;
+      background: rgba(255, 255, 255, 0.055);
+      cursor: pointer;
+      transition: background 160ms, border-color 160ms, transform 160ms;
+    }
+
+    .action-button:hover:not(:disabled) {
+      transform: translateY(-1px);
+      border-color: rgba(168, 139, 255, 0.6);
+      background: rgba(168, 139, 255, 0.13);
+    }
+
+    .action-button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .stat {
+      min-width: 0;
+      padding: 12px 15px;
+      border: 1px solid rgba(197, 192, 236, 0.1);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .stat-label {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .stat-value {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    #score { color: var(--cyan); }
+    #lives { color: #ff8da4; letter-spacing: 2px; }
+    #combo { color: #ffc980; }
+
+    .game-frame {
+      position: relative;
+      overflow: hidden;
+      height: min(60vh, 520px);
+      min-height: 340px;
+      border: 1px solid rgba(175, 151, 255, 0.2);
+      border-radius: 20px;
+      background: #0c1028;
+      box-shadow: 0 22px 80px rgba(0, 0, 0, 0.4), 0 0 45px rgba(130, 94, 222, 0.08);
+    }
+
+    canvas { display: block; width: 100%; height: 100%; }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      padding: 24px;
+      background: linear-gradient(rgba(8, 10, 24, 0.35), rgba(8, 10, 24, 0.77));
+      text-align: center;
+      backdrop-filter: blur(3px);
+      transition: opacity 180ms, visibility 180ms;
+    }
+
+    .overlay.hidden { visibility: hidden; opacity: 0; pointer-events: none; }
+    .overlay-emoji { margin-bottom: 10px; font-size: 44px; }
+
+    .overlay h2 {
+      margin: 0 0 9px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(25px, 6vw, 37px);
+      letter-spacing: -1px;
+    }
+
+    .overlay p {
+      max-width: 390px;
+      color: #c2c1d5;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .overlay strong { color: var(--cyan); }
+
+    .start-button {
+      margin-top: 22px;
+      padding: 13px 23px;
+      border: 0;
+      border-radius: 12px;
+      color: #111025;
+      background: linear-gradient(110deg, #b9a1ff, #82efff);
+      box-shadow: 0 8px 30px rgba(142, 156, 255, 0.23);
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 160ms, filter 160ms;
+    }
+
+    .start-button:hover { transform: translateY(-2px); filter: brightness(1.08); }
+
+    .hint {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .help {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 4px 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .help strong { color: #e2ddf5; }
+    .key {
+      display: inline-block;
+      padding: 1px 6px;
+      border: 1px solid rgba(197, 192, 236, 0.2);
+      border-radius: 5px;
+      color: #e8e4ff;
+      background: rgba(255, 255, 255, 0.06);
+      font-size: 11px;
+    }
+
+    .mobile-controls {
+      display: none;
+      grid-template-columns: repeat(3, 48px);
+      grid-template-rows: repeat(2, 42px);
+      justify-content: center;
+      gap: 5px;
+      margin: 16px auto 0;
+      touch-action: none;
+    }
+
+    .control {
+      border: 1px solid rgba(197, 192, 236, 0.18);
+      border-radius: 10px;
+      color: #e8e4ff;
+      background: rgba(255, 255, 255, 0.07);
+      font-size: 18px;
+      touch-action: none;
+      user-select: none;
+    }
+
+    .control:active { background: rgba(168, 139, 255, 0.3); }
+    .up { grid-area: 1 / 2; }
+    .left { grid-area: 2 / 1; }
+    .down { grid-area: 2 / 2; }
+    .right { grid-area: 2 / 3; }
+
+    @media (max-width: 600px) {
+      body { padding: 20px 13px; }
+      .topbar { align-items: flex-start; }
+      .brand { gap: 9px; }
+      .brand-icon { width: 39px; height: 39px; }
+      .actions { gap: 5px; }
+      .action-button { min-height: 37px; padding: 0 9px; font-size: 12px; }
+      .stats { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+      .stat { padding: 10px 9px; border-radius: 11px; }
+      .stat-label { font-size: 9px; letter-spacing: 0.5px; }
+      .stat-value { font-size: 18px; }
+      .game-frame { height: 54vh; min-height: 310px; border-radius: 16px; }
+      .help { align-items: flex-start; font-size: 11px; }
+      .mobile-controls { display: grid; }
+    }
+
+    @media (max-width: 390px) {
+      .subtitle { font-size: 10px; }
+      .action-button { padding: 0 7px; font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">🚀</div>
+        <div>
+          <h1>Kosmik qochish</h1>
+          <p class="subtitle">Meteoritlardan qoch. Kristallarni yig‘. Rekordni yangila!</p>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="action-button" id="sound-button" type="button" aria-pressed="true">♫  Ovoz</button>
+        <button class="action-button" id="pause-button" type="button" disabled>Ⅱ  Pauza</button>
+      </div>
+    </header>
+
+    <section class="stats" aria-label="O‘yin statistikasi">
+      <div class="stat"><span class="stat-label">Ochko</span><span class="stat-value" id="score">0</span></div>
+      <div class="stat"><span class="stat-label">Rekord</span><span class="stat-value" id="best">0</span></div>
+      <div class="stat"><span class="stat-label">Jon</span><span class="stat-value" id="lives">♥♥♥</span></div>
+      <div class="stat"><span class="stat-label">Bosqich</span><span class="stat-value" id="level">1</span></div>
+      <div class="stat"><span class="stat-label">Kombo</span><span class="stat-value" id="combo">—</span></div>
+    </section>
+
+    <section class="game-frame" aria-label="Kosmik qochish o‘yini">
+      <canvas id="game" aria-label="Kemani boshqaring, meteoritlardan qoching va moviy kristallarni yig‘ing"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="overlay-emoji" aria-hidden="true">🌌</div>
+        <h2 id="overlay-title">Kosmosga tayyormisiz?</h2>
+        <p id="overlay-text">Meteoritlardan qoching, moviy kristallarni yig‘ing. Har bir kristall sizga <strong>25 ochko</strong> va qisqa muddatli qalqon beradi!</p>
+        <button class="start-button" id="start-button" type="button">🚀  O‘yinni boshlash</button>
+        <span class="hint">Kristallar ketma-ketligi = yanada ko‘p ochko!</span>
+      </div>
+    </section>
+
+    <footer class="help">
+      <span><strong>Boshqaruv:</strong> <span class="key">←</span> <span class="key">↑</span> <span class="key">↓</span> <span class="key">→</span> yoki <span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span> · <span class="key">P</span> pauza</span>
+      <span>Kristall <strong style="color: #72efff">✦</strong> + qalqon · Meteoritdan ehtiyot bo‘ling!</span>
+    </footer>
+
+    <div class="mobile-controls" aria-label="Sensorli boshqaruv">
+      <button class="control up" type="button" data-key="ArrowUp" aria-label="Yuqoriga">↑</button>
+      <button class="control left" type="button" data-key="ArrowLeft" aria-label="Chapga">←</button>
+      <button class="control down" type="button" data-key="ArrowDown" aria-label="Pastga">↓</button>
+      <button class="control right" type="button" data-key="ArrowRight" aria-label="O‘ngga">→</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
