@@ -1,0 +1,220 @@
+:root {
+  --bg: #0f1115;
+  --sidebar: #161922;
+  --panel: #1c202b;
+  --panel-2: #232837;
+  --border: #2c3243;
+  --text: #e6e8ee;
+  --muted: #9aa1b2;
+  --accent: #c08a55;
+  --accent-soft: rgba(192, 138, 85, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 0 10px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu a {
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: var(--muted);
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu a:hover {
+  background: var(--panel);
+  color: var(--text);
+}
+
+.menu a.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+  font-size: 18px;
+}
+
+.content {
+  flex: 1;
+  margin: 16px;
+  padding: 24px;
+  background: var(--panel);
+  border-radius: 16px;
+}
+
+.tabs {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab {
+  padding: 12px 4px;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: var(--panel-2);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 16px 18px;
+}
+
+th {
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+tbody tr:hover {
+  background: var(--accent-soft);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+}
+
+.loader-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.loader {
+  width: 46px;
+  height: 46px;
+  border: 4px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: aylanish 0.8s linear infinite;
+}
+
+@keyframes aylanish {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+.sahifa-sarlavha {
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.holat {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.holat.bajarilmagan {
+  background: #e8340a;
+}
+
+.holat.kutayotganlar {
+  background: #5b6ef0;
+}
+
+.holat.berilmagan {
+  background: #6b7073;
+}
