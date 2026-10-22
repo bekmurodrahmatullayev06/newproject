@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vazifalar ro‘yxati</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Vazifalar ro‘yxati</h1>
+
+    <form class="form">
+        <input id="word" type="text" placeholder="Vazifa nomi" required>
+        <textarea id="description" placeholder="Vazifa haqida" required></textarea>
+        <label for="time">Bajarish vaqti (ixtiyoriy)</label>
+        <input id="time" type="datetime-local">
+        <button id="submit" type="submit">Qo‘shish</button>
+        <button id="cancel" class="cancel-button" type="button" hidden>Bekor qilish</button>
+    </form>
+
+    <div class="list-header">
+        <p id="count"></p>
+        <input id="search" type="search" placeholder="Vazifani qidirish">
+        <select id="filter" aria-label="Vazifalarni filtrlash">
+            <option value="all">Barchasi</option>
+            <option value="active">Bajarilmagan</option>
+            <option value="done">Bajarilgan</option>
+        </select>
+    </div>
+
+    <div class="container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

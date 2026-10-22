@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 760px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #f3f5f8;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #00000012;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form label {
+    margin-bottom: -8px;
+    color: #555;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 14px;
+    font: inherit;
+    color: #fff;
+    background-color: #2864dc;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #194fb8;
+}
+
+.container {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.list-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.list-header p {
+    margin: 0;
+    color: #555;
+}
+
+.container > .plan {
+    padding: 14px 18px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px #00000010;
+}
+
+.plan h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.plan p {
+    margin: 0 0 10px;
+    overflow-wrap: anywhere;
+}
+
+.plan small {
+    display: block;
+    margin-bottom: 12px;
+    color: #666;
+}
+
+.plan.completed h2,
+.plan.completed p {
+    color: #777;
+    text-decoration: line-through;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.actions button {
+    padding: 7px 10px;
+}
+
+.actions .done-button {
+    background-color: #238636;
+}
+
+.actions .edit-button {
+    background-color: #d58b00;
+}
+
+.actions .delete-button {
+    background-color: #dc3545;
+}
+
+.actions .done-button:hover {
+    background-color: #1b6e2b;
+}
+
+.actions .edit-button:hover {
+    background-color: #ad7100;
+}
+
+.actions .delete-button:hover {
+    background-color: #b42332;
+}
+
+.cancel-button {
+    background-color: #687386;
+}
+
+@media (max-width: 480px) {
+    body {
+        margin-top: 30px;
+    }
+
+    .list-header {
+        grid-template-columns: 1fr;
+    }
+}
