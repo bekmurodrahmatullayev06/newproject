@@ -3,6 +3,7 @@ services:
     name: future-step-center
     runtime: node
     plan: starter
+    rootDir: ish/tajriba/vite-project
     buildCommand: npm ci && npm run build
     startCommand: npm start
     healthCheckPath: /api/setup/status

@@ -34,9 +34,11 @@ yangilanadi; buning uchun joriy parolni qayta kiritish talab etiladi.
 
 ## Render’da joylashtirish
 
-Loyiha ildizidagi `render.yaml` Render Blueprint orqali Node web service va
-doimiy PostgreSQL bazasini yaratadi. Render hisobida **New + → Blueprint** ni
-tanlab GitHub repozitoriyani ulang. Blueprint `starter` web service va
+Render hisobida **New + → Blueprint** ni tanlab GitHub repozitoriyani ulang;
+Blueprint file path sifatida `ish/tajriba/vite-project/render.yaml` ni kiriting.
+Ushbu konfiguratsiya monorepo ichidagi loyiha papkasini root qilib, Render
+Blueprint orqali Node web service va doimiy PostgreSQL bazasini yaratadi.
+Blueprint `starter` web service va
 `basic-256mb` PostgreSQL rejasini tanlaydi; bu pullik xizmatlarni yaratishdan
 oldin Render’ning amaldagi narxlarini tekshiring.
 
